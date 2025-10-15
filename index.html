@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Hub</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Media Hub</h1>
+    <hr>
+    <p><b>Welcome back!</b></p>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('music')">Music</a></li>
+            <li><a href="#" onclick="showSection('movies')">Movies</a></li>
+            <li><a href="#" onclick="showSection('submit')">Submit</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="music" class="hidden">
+            <h2>Music Playlist</h2>
+            <div id="music-player"></div>
+        </section>
+
+        <section id="movies" class="hidden">
+            <h2>Video Playlist</h2>
+            <div id="video-player"></div>
+        </section>
+
+        <section id="submit"  class="hidden">
+            <h2>Submit a Song or Movie</h2>
+            <label>
+                Select Type:
+                <select name="" id="mediaType" onchange="toggleFormFields()">
+                    <option value="">-- Choose --</option>
+                    <option value="song">Song</option>
+                    <option value="movie">Movie</option>
+                </select>
+            </label>
+
+            <form id="submissionForm" onsubmit="handleFormSubmit(event)">
+                <div id="songFields" class="hidden">
+                    <input type="text" placeholder="title" required>
+                    <input type="text" placeholder="Artist" required>
+                    <input type="text" placeholder="Album">
+                    <input type="text" placeholder="Genre">
+                    <input type="number" placeholder="Year">
+                </div>
+
+                <div id="movieFields" class="hidden">
+                    <input type="text" placeholder="title" required>
+                    <textarea placeholder="Description" required></textarea>
+                    <input type="text" placeholder="Genre">
+                    <input type="number" placeholder="Year">
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,41 @@
+h1 {
+    text-align: center;
+    color: rgb(26, 36, 223);
+    
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: white;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3d8ce1;
+    font-weight: bold;
+}
+
+section {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+input, textarea, select {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    max-width: 400px
+}
+
